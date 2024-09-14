@@ -1,0 +1,41 @@
+### traer todas las peliculas
+GET http://localhost:1234/movies
+
+### traer una pelicula por nombre
+GET http://localhost:1234/movies?title=The Dark Knight
+
+### traer una pelicula por id
+GET http://localhost:1234/movies/282d097b-65c3-11ef-aed7-0068eb7639ec
+
+### crear una pelicula 
+POST http://localhost:1234/movies   
+content-type: application/json
+
+{
+    "id": "9e6106f0-848b-4810-a11a-3d832a5610f9",
+    "title": "Forrest Gump",
+    "year": 1994,
+    "director": "Robert Zemeckis",
+    "duration": 142,
+    "poster": "https://i.ebayimg.com/images/g/qR8AAOSwkvRZzuMD/s-l1600.jpg",
+    "genre": ["Drama", "Romance"],
+    "rate": 8.8
+}
+
+### Actualizar una pelicula por todos sus valores
+PUT http://localhost:1234/movies/526da7c1-6940-11ef-9de6-0068eb7639ec
+Content-Type: application/json
+
+ {
+    "id": "7e3fd5ab-60ff-4ae2-92b6-9597f0308d1",
+    "title": "Gladiator",
+    "year": 2000,
+    "director": "Ridley Scott",
+    "duration": 155,
+    "poster": "https://img.fruugo.com/product/0/60/14417600_max.jpg",
+    "genre": ["Action", "Adventure", "Drama"],
+    "rate": 8.5
+  }
+
+### Eliminar una pelicula por id
+DELETE http://localhost:1234/movies/282d0656-65c3-11ef-aed7-0068eb7639ec
